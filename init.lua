@@ -198,9 +198,10 @@ require('lazy').setup({
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require('github-theme').setup({
-        theme_style = "dark"
       -- ...other config
     })
+
+    vim.cmd.colorscheme('github_dark')
 
   end,
   },
