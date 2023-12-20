@@ -44,6 +44,8 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.opt.guifont = 'Inconsolata LGC:20'
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -190,11 +192,16 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    -- 
+    'project0n/github-nvim-theme',
+    lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+    require('github-theme').setup({
+      -- ...
+    })
+
+    vim.cmd('colorscheme github_dark')
     end,
   },
 
@@ -277,7 +284,7 @@ require('lazy').setup({
 vim.o.hlsearch = false
 
 -- Make line numbers default
-vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
