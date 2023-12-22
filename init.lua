@@ -46,6 +46,11 @@ vim.g.maplocalleader = ' '
 
 vim.opt.guifont = 'Inconsolata LGC:h15'
 
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = false
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -285,6 +290,7 @@ require('lazy').setup({
 vim.o.hlsearch = false
 
 -- Make line numbers default
+vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Enable mouse mode
