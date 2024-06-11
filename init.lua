@@ -94,6 +94,10 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 vim.opt.guifont = 'Inconsolata LGC Nerd Font:h14'
 
+-- Anything else is mental
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
